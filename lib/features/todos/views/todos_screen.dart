@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_todo/features/todos/providers/todos_provider.dart';
 import 'package:riverpod_todo/features/todos/views/widgets/add_todo_dialog.dart';
+import 'package:riverpod_todo/features/todos/views/widgets/todo_list_error_widget.dart';
 
 class TodosScreen extends ConsumerWidget {
   const TodosScreen({super.key});
@@ -45,9 +46,7 @@ class TodosScreen extends ConsumerWidget {
         onRefresh: () => ref.read(todosProvider.notifier).refresh(),
         child: todos.when(
          loading: () => const Center(child: CircularProgressIndicator()),
-         error: (error, stackTrace) => Center(
-           child: Text('Error: ${error.toString()}'),
-         ),
+         error: (error, stackTrace) => const TodoListErrorWidget(),
          data: (filteredTodos) => ListView.builder(
            itemCount: filteredTodos.length,
            itemBuilder: (context, index) {
