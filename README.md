@@ -42,8 +42,8 @@ flutter run
 
 This repository is part of a comprehensive Riverpod tutorial series:
 
-1. [Part 1: Master Riverpod](/blog/series/riverpod/master-riverpod) - Core concepts and fundamentals
-2. [Part 2: Building a Todo App](/blog/series/riverpod/riverpod-todo-app) - Practical implementation
+1. [Part 1: Master Riverpod](https://devayaan.com/blog/series/riverpod/master-riverpod) - Core concepts and fundamentals
+2. [Part 2: Building a Todo App](https://devayaan.com/blog/series/riverpod/riverpod-todo-app) - Practical implementation
 
 ## 🏗️ Project Structure
 
